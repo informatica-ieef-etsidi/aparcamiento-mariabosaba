@@ -71,7 +71,7 @@ int main() {
                                 precio=TARIFA*times;
                                 printf("El precio del aparcamiento es de 0.25 EUROS por segundo. \n");
                                 printf("Su vehiculo a permanecido en nuestro establecimiento %d segundos.\n",times);
-                                printf("El importe es de:%.2f\n",precio);
+                                printf("El importe es de:%.2f euros.\n",precio);
 			        }
 			else {
 				getchar();
