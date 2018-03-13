@@ -55,7 +55,7 @@ int main() {
                                 printf("Hora de salida %d:%d:%d\n", hora->tm_hour, hora->tm_min, hora->tm_sec);
 				times = (clock() - times)/1000; 
                                 precio=TARIFA*times;
-                                printf("El precio del aparcamiento es de 0.25 EUROS por segundo. \n");
+                                printf("El precio del aparcamiento es de %f EUROS por segundo. \n",TARIFA);
                                 printf("Su vehiculo a permanecido en nuestro establecimiento %d segundos.\n",times);
                                 printf("El importe es de:%.2f euros.\n",precio);
                 
@@ -69,7 +69,7 @@ int main() {
                                 printf("Hora de salida %d:%d:%d", hora->tm_hour, hora->tm_min, hora->tm_sec);
 				times = (clock() - times)/1000; 
                                 precio=TARIFA*times;
-                                printf("El precio del aparcamiento es de 0.25 EUROS por segundo. \n");
+                                printf("El precio del aparcamiento es de %f EUROS por segundo. \n",TARIFA);
                                 printf("Su vehiculo a permanecido en nuestro establecimiento %d segundos.\n",times);
                                 printf("El importe es de:%.2f euros.\n",precio);
 			        }
