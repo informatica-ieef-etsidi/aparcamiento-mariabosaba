@@ -2,10 +2,10 @@
 #include<stdlib.h>
 #include <string.h>
 #include <time.h>
-#define TARIFA 0.25
+#define TARIFA 0.001
 
 int main() {
-	char opcion = 1, matricula1[8], matricula2[8] = ("1234ABCD");//Inicializo una de las matriculas, para tener una plaza llena.
+	char opcion = 1, matricula1[8], matricula2[8] = ("1234ABC");//Inicializo una de las matriculas, para tener una plaza llena.
 	int plaza1 = 0, plaza2 = 1;
 	float precio;
 	clock_t times = clock(); 
