@@ -73,21 +73,19 @@ void main() {
 						i++;
 					}
 					j = 0;
+					i = 0;
 					while (introducirmatricula[j] != '\0'&&matriculamoto[j] != '\0') {
 						if (introducirmatricula[j] == matriculamoto[j]) {
-							comparar = 0;
-						}
-						else {
-							comparar = 1;
+							i++;//Se cuentan las veces que entra en el if, si son 7(hasta el barra cero) es que son iguales.
 						}
 						j++;
 					}
-					while (comparar == 0) {//Si la numeracioón es correcta,pero la matricula introducida es igual que la que estaba, también volverá a pedirla.
+					while (i==7) {//Si la numeración es correcta,pero la matricula introducida es igual que la que estaba, también volverá a pedirla.
 						printf("ERROR. La matricula introducida ya se encuentra en el sistema.\n");
 						printf("Vuleve a introducir la matricula: \n");
 						getchar();
 						gets(introducirmatricula);
-						comparar = 1;//se inicializa a uno para que no siempre entre en el bucle.
+						i = 0;//Se inicializa i para que no siempre entre al bucle.
 					}
 				if (plazamoto == 0) {
 					printf("La plaza 1 de moto esta libre.\n");
@@ -102,28 +100,14 @@ void main() {
 				else {
 					printf("Las plazas de moto no estan libres.\n");
 				}
+				getchar();
 				break;
+				getchar();
 			case'c':
 			case'C':
 				printf("Introduzca matricula:  \n");//Se hace el mismo procedimiento que el realizado en la moto.
 				getchar();
 				gets(introducirmatricula);
-				j = 0;
-				while (introducirmatricula[j] != '\0'&&matriculamoto[j] != '\0') {
-					if (introducirmatricula[j] == matriculamoto[j]) {
-						comparar = 0;
-					}
-					else {
-						comparar = 1;
-					}
-					j++;
-				}
-				while (comparar == 0) {
-					printf("ERROR. La matricula introducida ya se encuentra en el sistema.\n");
-					printf("Vuleve a introducir la matricula: \n");
-					getchar();
-					gets(introducirmatricula);
-				}
 					i = 0;
 					while (i < 4) {
 						while (introducirmatricula[i] < 48 || introducirmatricula[i]>59) {
@@ -151,6 +135,21 @@ void main() {
 						}
 						i++;
 					}
+					j = 0;
+					i = 0;
+					while (introducirmatricula[j] != '\0'&&matriculacoche[j] != '\0') {
+						if (introducirmatricula[j] == matriculacoche[j]) {
+							i++;
+						}
+						j++;
+					}
+					while (i == 7) {
+						printf("ERROR. La matricula introducida ya se encuentra en el sistema.\n");
+						printf("Vuleve a introducir la matricula: \n");
+						getchar();
+						gets(introducirmatricula);
+						i = 0;
+					}
 				if (plazacoche == 0) {
 					printf("La plaza 1 de coche esta libre.\n");
 					plazacoche = 1;
@@ -170,6 +169,7 @@ void main() {
 			comprobar1 = 1;
 			strcpy(introducirmatricula, "\0");
 			break;
+			getchar();
 		case'A':
 		case'a':
 			printf("Pulse la tecla M si su vehiculo es una moto \n");
@@ -278,16 +278,15 @@ void main() {
 					i++;
 				}
 				j = 0;
+				i = 0;
 				while (introducirmatricula[j] != '\0'&&matriculamoto[j] != '\0') {
 					if (introducirmatricula[j] == matriculamoto[j]) {
-						comparar = 0;
-					}
-					else {
-						comparar = 1;
-					}
+						i++;//cuenta las veces que son iguales
+						}
 					j++;
+	
 				}
-				if (comparar == 0) {
+				if (i==7) {
 					printf("La moto esta aparcada. \n");
 				}
 				else {
@@ -327,16 +326,14 @@ void main() {
 					i++;
 				}
 				j = 0;
+				i = 0;
 				while (introducirmatricula[j] != '\0'&&matriculacoche[j] != '\0') {
 					if (introducirmatricula[j] == matriculacoche[j]) {
-						comparar = 0;
-					}
-					else {
-						comparar = 1;
+						i++;
 					}
 					j++;
 				}
-				if (comparar == 0) {
+				if (i==7) {
 					printf("El coche esta aparcado. \n");
 				}
 				else {
